@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <title>Form Test Index</title>
+      <link rel="stylesheet" type="text/css" href="./static/style.css">
+
+    </head>
+    <body>
+      <h1>Index Page</h1>
+      <h3>Welcome</h3>
+      <div>
+        <form action='/results' method='post'>
+            Name: <input type='text' name='name'>
+            <select name="location">
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+			      </select>
+        	  <select name="language">
+  				      <option value="Python">Python</option>
+  				      <option value="Javascript">Javascript</option>
+			      </select>
+            <textarea name='comments' rows="4" cols="50">
+                Comments
+            </textarea>
+
+        	<input type='submit' value='Button'>
+     	</form>
+     </div>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+
+    </body>
+</html>
