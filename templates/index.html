@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
@@ -19,6 +19,11 @@
               <input type='text' name='name' id="name" placeholder="Enter Name" class="form-control">
           </div>
           <div class='form-group'>
+              <label for="name">Email:</label>
+              <input type='text' name='email' id="email" placeholder="Enter Email" class="form-control">
+
+          </div>
+          <div class='form-group'>
             <label for="location">Location:</label>
             <select name="location" id="location" class="form-control">
                 <option value="San Jose">San Jose</option>
@@ -34,10 +39,16 @@
           </div>
           <div class='form-group'>
             <label for="comments">Comments:</label>
-            <textarea name='comments' rows="4" cols="50" class="form-control">
-                
-            </textarea>
+            <textarea name='comments' rows="4" cols="50" class="form-control"></textarea>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                 <p>{{message}}</p>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
           </div>
+
         	<input type='submit' value='Button' class="btn btn-info">
      	</form>
 
